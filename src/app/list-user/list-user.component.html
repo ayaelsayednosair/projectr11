@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="d-flex  justify-content-center">
+    <img src="../assets/image/download.png" alt="">
+  </div>
+  <div class="row justify-content-center pt-5">
+    <ul class="list-group w-100">
+      <li class="list-group-item" *ngFor="let User of users">
+        {{User.name}}
+        <button class="btn btn-success  float-end " [routerLink]="['dit']">Edit</button>
+        <button class="btn btn-info float-end mx-1" [routerLink]="['veiw',User.id]">View</button>
+        <button class="btn btn-danger  float-end" (click)="DeletUser(User.id)">Delete</button>
+      </li>
+      <button class="btn btn-primary btn-larg m-3" [routerLink]="['Add']">Add User</button>
+    </ul>
+  </div>
+
+
+
+</div>
